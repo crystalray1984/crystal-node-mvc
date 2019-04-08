@@ -1,0 +1,28 @@
+{
+    "name": "crystal-node-mvc",
+    "version": "1.0.1",
+    "description": "",
+    "main": "./src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/crystalray1984/crystal-node-mvc.git"
+    },
+    "author": "crystal1984",
+    "bugs": {
+        "url": "https://github.com/crystalray1984/crystal-node-mvc/issues"
+    },
+    "homepage": "https://github.com/crystalray1984/crystal-node-mvc#readme",
+    "dependencies": {
+        "crystal-node-mysql": "^1.0.4",
+        "crystal-node-redis": "^1.0.4",
+        "extend2": "^1.0.0",
+        "is-array": "^1.0.1",
+        "koa": "^2.7.0",
+        "koa-body": "^4.1.0",
+        "koa-compose": "^4.1.0",
+        "mime": "^2.4.2"
+    }
+}

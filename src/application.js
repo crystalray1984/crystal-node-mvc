@@ -137,7 +137,7 @@ class Application extends Koa {
     }
 
     connectDb(type, options) {
-        let factory = utils.tryRequire(
+        let factory = utils.requireElse(
             path.resolve(this.paths.db, `./${type}`),
             `crystal-node-${type}`
         )
@@ -150,7 +150,7 @@ class Application extends Koa {
     }
 
     connectDbPool(type, options) {
-        let factory = utils.tryRequire(
+        let factory = utils.requireElse(
             path.resolve(this.paths.db, `./${type}`),
             `crystal-node-${type}`
         )

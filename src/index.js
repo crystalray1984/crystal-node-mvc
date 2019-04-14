@@ -2,6 +2,7 @@
 
 const Application = require('./application')
 const Controller = require('./controller')
+const Processor = require('./processor')
 const http = require('http')
 
 function run(root, ...ports) {
@@ -78,4 +79,5 @@ function run(root, ...ports) {
 
 module.exports.Application = Application
 module.exports.Controller = Controller
+module.exports.Processor = Processor
 module.exports.run = run

@@ -21,7 +21,7 @@ interface Paths {
 }
 
 declare namespace MVC {
-    class Application<StateT = any, CustomT = {}> extends Koa<StateT, CustomT> {
+    class Application extends Koa {
         /**
          * 初始化应用程序实例
          * @param root 应用程序根目录
@@ -48,16 +48,16 @@ declare namespace MVC {
         connectDb(type: string, ...options: any[]): any
     }
 
-    class Processor<CustomT = {}> {
-        constructor(app: Application<any, CustomT>)
+    class Processor {
+        constructor(app: Application)
 
-        protected app: Application<any, CustomT>
+        protected app: Application
     }
 
-    class Controller<CustomT = {}> extends Processor<CustomT> {
-        ctx: Koa.ParameterizedContext<any, CustomT>
+    class Controller extends Processor {
+        ctx: Koa.Context
 
-        constructor(app: Application<any, CustomT>, ctx: Koa.ParameterizedContext<any, CustomT>)
+        constructor(app: Application, ctx: Koa.Context)
 
         protected __before(action: string, params: string[]): Promise<boolean>
         protected __after(action: string, params: string[]): Promise<void>

@@ -10,7 +10,7 @@ module.exports = (options) => {
     const bodyParser = body(options)
 
     return async (ctx, next) => {
-        if (ctx.method === 'POST') {
+        if (ctx.method === 'POST' || ctx.method === 'PUT') {
             let error
             try {
                 await bodyParser(ctx, next)
